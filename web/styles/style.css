@@ -1,0 +1,33 @@
+body{
+    background-color: #F4F4DF;
+    text-align: center;
+}
+
+/*centering the table */
+table{
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+
+}
+
+.block{
+    background-color: gray;
+
+    margin:10px;
+    padding:10px;
+
+    border-style: solid;
+    border-width: 3px;
+    border-color: darkgray;
+    border-radius: 5px;
+}
+
+#stats{
+    background-color: white;
+
+    border-style: dashed;
+    border-color: lightgray;
+    border-width: 3px;
+}
+
