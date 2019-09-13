@@ -17,7 +17,6 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="styles/style.css">
-
     </head>
     <body>
 	<div class="container-fluid">
@@ -25,8 +24,8 @@
 		<div class="row">
 			<div class="col-lg-12 ">
 				<div class="block">
-					<button class="btn btn-warning btn-lg " id="set1">Set 1</button>
-					<button class="btn btn-warning btn-lg" id="set2">Set 2</button>
+					<button class="btn btn-warning btn-lg" onclick="setBoard(set1)">Set 1</button>
+					<button class="btn btn-warning btn-lg" onclick="setBoard(set2)">Set 2</button>
 				</div>
 			</div>
 		</div>
@@ -34,24 +33,7 @@
 		<div class="row ">
 			<div class="col-lg-12">
 				<div class="block">
-					<table class="table-bordered " id="board">
-						<!-- Table data is just for testing and can be removed -->
-						<tr>
-							<td> Test </td>
-							<td> Test </td>
-							<td> Test </td>
-						</tr>
-						<tr>
-							<td> Test </td>
-							<td> Test </td>
-							<td> Test </td>
-						</tr>
-						<tr>
-							<td> Test </td>
-							<td> Test </td>
-							<td> Test </td>
-						</tr>
-					</table>
+					<table class="table-bordered " id="board"></table>
 				</div>
 			</div>
 		</div>
@@ -63,7 +45,8 @@
 				</div>
 			</div>
 		</div>
-	
 	</div>
+	<!-- JS -->
+	<script src="scripts/script.js"></script>
 	</body>
 </html>
