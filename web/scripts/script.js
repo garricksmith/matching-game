@@ -11,6 +11,8 @@ var totalAttemptedMatches=0;
 var correctMatches=0;
 var incorrectMatches=0;
 
+var interval = setInterval(function(){},1000);
+
 function flip(image, seed, id, setn) {
     var card = document.getElementById(id);
     
@@ -63,6 +65,7 @@ function setBoard(setn) {
     correctMatches = 0;
     incorrectMatches = 0;
     cardFlipped = false;
+    stopTimer();
     
     var seeds = genSeeds();
     var board = document.getElementById("board");
@@ -119,7 +122,7 @@ function startTimer(duration) {
     var timer = duration, minutes, seconds;
     var stats = document.getElementById("stats");
     
-    setInterval(function() {
+    interval = setInterval(function() {
         minutes = parseInt(timer / 60,10);
         seconds = parseInt(timer % 60,10);
         
@@ -127,7 +130,7 @@ function startTimer(duration) {
         seconds = seconds < 10 ? "0" + seconds : seconds;  
         
         if(--timer < 0) {
-        timer = 600;
+        stopTimer();
         alert("Time's Up! Stop playing and look at results");
         stats.innerHTML = "<h3>Correct Matches = "+correctMatches+"</h3>"+
                           "<h3>Incorrect Matches = "+incorrectMatches+"</h3>"+
@@ -135,4 +138,8 @@ function startTimer(duration) {
         }     
     }, 1000);
      
+}
+
+function stopTimer(){
+    clearInterval(interval);
 }
