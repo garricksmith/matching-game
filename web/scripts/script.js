@@ -89,7 +89,7 @@ function setBoard(setn) {
     newBoard = newBoard + "</tr>";         
      
     board.innerHTML = newBoard;
-    stats.innerHTML = "";
+    stats.innerHTML = "<h3>Results Will Be Shown Here After The Game</h3>";
 }
 
 function genSeeds() {
